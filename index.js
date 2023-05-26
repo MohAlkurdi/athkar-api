@@ -10,6 +10,10 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/public/index.html");
+});
+
 app.get("/morning", (req, res) => {
   const morningDoaa = ad3eh.morning;
   res.json(morningDoaa);
