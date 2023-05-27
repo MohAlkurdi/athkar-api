@@ -4,12 +4,155 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <title>Athkar API</title>
   </head>
+
   <body>
-    <div class="h-screen overflow-hidden bg-indigo-500">
-      <h1 class="mt-4 text-center pt-20 text-white text-7xl sm:text-8xl">
-        Coming Soon
-      </h1>
+    <div class="container max-w-screen-lg px-5 mx-auto mt-20 overflow-x-hidden">
+      <div class="text-center">
+        <h1 class="text-4xl">Athkar API</h1>
+        <p class="my-2 text-lg">Doa'a API, Easy to use</p>
+      </div>
+
+      <!-- Start Browser Mockup -->
+      <div class="max-w-2xl mx-auto my-10">
+        <div
+          class="w-full h-11 rounded-t-lg bg-gray-200 flex justify-start items-center space-x-1.5 px-3"
+        >
+          <span class="w-3 h-3 bg-red-400 rounded-full"></span>
+          <span class="w-3 h-3 bg-yellow-400 rounded-full"></span>
+          <span class="w-3 h-3 bg-green-400 rounded-full"></span>
+        </div>
+        <div class="w-full bg-gray-100 border-t-0 h-96">
+          <pre id="json"></pre>
+        </div>
+      </div>
+      <!-- End Browser Mockup -->
+
+      <!-- Start resources section -->
+      <div class="py-5">
+        <h2 class="text-2xl">Resources</h2>
+        <p class="text-lg">
+          Athkar API comes with 2 common resources (there's more to come) :
+        </p>
+
+        <table class="table p-4 rounded-lg">
+          <thead>
+            <tr>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="text-gray-700">
+              <td class="p-2">/morning</td>
+              <td class="p-2">25 morning doa'a</td>
+            </tr>
+            <tr class="text-gray-700">
+              <td class="p-2">/night</td>
+              <td class="p-2">22 night doa'a</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- End resources section -->
+
+      <!-- Start endpoints section -->
+      <div class="py-5">
+        <h2 class="text-2xl">Endpoints</h2>
+        <p class="text-lg">Some HTTP methods that you can use:</p>
+
+        <table class="table p-4 rounded-lg">
+          <thead>
+            <tr>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="text-gray-700">
+              <td class="p-2">GET</td>
+              <td class="p-2">/morning</td>
+            </tr>
+            <tr class="text-gray-700">
+              <td class="p-2">GET</td>
+              <td class="p-2">/night</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- End endpoints section -->
+
+      <!-- Start contribution & issue section -->
+      <div class="py-5">
+        <h2 class="text-2xl">Contribution & issue</h2>
+        <p class="text-lg">
+          Feel free to
+          <a
+            href="https://github.com/MohAlkurdi/athkar-api"
+            target="_blank"
+            class="text-blue-900 underline"
+            >fork</a
+          >
+          this project and play around with it or open
+          <a
+            href="https://github.com/MohAlkurdi/athkar-api/issues"
+            target="_blank"
+            class="text-blue-900 underline"
+            >issue</a
+          >
+          <br />
+          For feature requests, you can hit me up on
+          <a
+            href="https://twitter.com/Coder_Moh"
+            target="_blank"
+            class="text-blue-900 underline"
+            >Twitter</a
+          >
+          or
+          <a
+            href="mailto:imohkurdi@gmail.com"
+            target="_blank"
+            class="text-blue-900 underline"
+            >Email</a
+          >
+        </p>
+      </div>
+      <!-- End contribution & issue section -->
+
+      <!-- Start footer -->
+      <div class="my-10 text-center">
+        <p>
+          Coded with ❤️ by
+          <a
+            href="https://twitter.com/Coder_Moh"
+            target="_blank"
+            class="text-blue-900 underline"
+            >Moh Al-Kurdi</a
+          >
+        </p>
+      </div>
+      <!-- End footer -->
     </div>
+    <script>
+      // Script for showing sample json response
+      let jsonData = [
+        {
+          id: "athkar#1.19",
+          text: "سُبْحانَ اللهِ وبِحَمْدِهِ.",
+          counter: 100,
+        },
+        {
+          id: "athkar#1.24",
+          text: "أَستَغْفِرُ اللهَ وأتُوبُ إليهِ.",
+          counter: 100,
+        },
+      ];
+      document.getElementById("json").innerHTML = JSON.stringify(
+        jsonData,
+        null,
+        2
+      );
+    </script>
   </body>
 </html>
