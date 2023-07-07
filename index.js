@@ -1,5 +1,5 @@
-const express = require("express");
-const ad3eh = require("./athkar.json");
+import express from "express";
+import ad3eh from "./athkar.json" assert { type: "json" };
 
 const app = express();
 
@@ -11,7 +11,7 @@ app.use((req, res, next) => {
 });
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/index.html");
+  res.sendFile("public/index.html", { root: "." });
 });
 
 app.get("/morning", (req, res) => {
@@ -24,4 +24,6 @@ app.get("/night", (req, res) => {
   res.json(nightDoaa);
 });
 
-app.listen(5000, () => console.log("API server running"));
+app.listen(5000, () =>
+  console.log("server is running on http://localhost:5000")
+);
