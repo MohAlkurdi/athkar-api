@@ -10,9 +10,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/", (req, res) => {
-  res.sendFile("public/index.html", { root: "." });
-});
+app.use(express.static("public"));
 
 app.get("/morning", (req, res) => {
   const morningDoaa = ad3eh.morning;

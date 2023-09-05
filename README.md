@@ -36,6 +36,34 @@ fetch("https://athkar-api.cyclic.app/morning")
   });
 ```
 
+## Installation
+
+1. Clone the repository:
+
+```shell
+   git clone https://github.com/MohAlkurdi/athkar-api.git
+```
+
+2. Navigate to the project directory:
+
+```shell
+cd athkar-api
+```
+
+3. Install the project dependencies:
+
+```shell
+npm i
+```
+
+4. Run dev server:
+
+```shell
+npm run dev
+```
+
+Development server should run on port 5000
+
 ## Contributing
 
 If you want to contribute to this API, feel free to submit a pull request or open an issue.
